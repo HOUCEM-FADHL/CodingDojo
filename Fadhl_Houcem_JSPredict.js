@@ -11,5 +11,3 @@ function myBirthYearFunc(birthYearInput){
                 var sum = num1 + num2;
                 console.log(sum); // 30
             }
-            
-            
