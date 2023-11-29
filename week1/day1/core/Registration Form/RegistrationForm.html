@@ -6,61 +6,85 @@
     <title>Registration Form</title>
 </head>
 <body>
+    <!-- Heading of the registration form -->
     <h1>Registration Form</h1>
+
+    <!-- First Name Input -->
     <div>
         <label>First Name: *</label>
         <input title="first_name" type="text" name="first_name">
     </div>
+
+    <!-- Last Name Input -->
     <div>
         <label>Last Name: *</label>
         <input title="last_name" type="text" name="last_name">
     </div>
+
+    <!-- Email Address Input -->
     <div>
-        <label>Email Adress: *</label>
+        <label>Email Address: *</label>
         <input title="email" type="email" name="email">
     </div>
+
+    <!-- Password Input -->
     <div>
         <label>Password: *</label>
         <input title="password" type="password" name="password">
     </div>
+
+    <!-- Confirm Password Input -->
     <div>
         <label>Confirm Password: *</label>
         <input title="password" type="password" name="password">
     </div>
+
+    <!-- Birthday Input -->
     <div>
         <label>Birthday:</label>
         <input title="dob" type="date" name="dob">
     </div>
+
+    <!-- Gender Identity Input -->
     <div>
         <label>Gender Identity:</label><br>
+        <!-- Radio buttons for gender selection -->
         <input type="radio" name="gender" value="male" id="male">
         <label for="male">Male</label>
         <input type="radio" name="gender" value="female" id="female">
-        <label for="female">female</label>
+        <label for="female">Female</label>
         <input type="radio" name="gender" value="non-binary" id="non-binary">
         <label for="non-binary">Non-binary</label>
         <input type="radio" name="gender" value="no-answer" id="no-answer">
         <label for="no-answer">I prefer not to answer</label>
     </div>
+
+    <!-- Short Description Textarea -->
     <div>
-        <label>A short discription about my self :</label><br>
-        <textarea title="discription" name="comment" cols="30" rows="2"></textarea>
+        <label>A short description about myself:</label><br>
+        <textarea title="description" name="comment" cols="30" rows="2"></textarea>
     </div>
+
+    <!-- Favorite Language Dropdown -->
     <div>
         <label>Favorite Language:</label>
         <select title="language" name="language">
-            <option value="english">JavaScript</option>
-            <option value="french">C#</option>
-            <option value="german">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="csharp">C#</option>
+            <option value="python">Python</option>
         </select>
     </div>
+
+    <!-- Email Updates Checkbox -->
     <div>
-        <input type="checkbox" name="updates" 
-        id="updates" checked >
-        <label for="updates">Yes, I would like 
-        to receive periodic email updates</label>
+        <input type="checkbox" name="updates" id="updates" checked>
+        <label for="updates">Yes, I would like to receive periodic email updates</label>
     </div>
+
+    <!-- Submit Button -->
     <input type="submit" value="Create Account">
+
+    <!-- Required Field Note -->
     <div>
         * Indicates a required field
     </div>
