@@ -1,0 +1,30 @@
+/* Styling for the Search button */
+#search {
+    color: rgb(53, 172, 160); /* Text color is a shade of green */
+    background-color: whitesmoke; /* Background color is whitesmoke */
+    border-color: rgb(53, 172, 160); /* Border color is a shade of green */
+    border-style: solid; /* Border style is solid */
+    padding: 2px 40px; /* Padding is 2px on the top/bottom, 40px on the left/right */
+    border-radius: 20px; /* Border radius for rounded corners */
+    margin: 40px 40px 10px; /* Margin spacing on top, right, and bottom */
+    font-weight: bold; /* Bold font weight */
+}
+
+/* Styling for the Plus button */
+#plus {
+    color: white; /* Text color is white */
+    background-color: turquoise; /* Background color is turquoise */
+    border: 0; /* No border */
+    border-radius: 50%; /* Border radius for a circular shape */
+    padding: 8px 12px; /* Padding is 8px on the top/bottom, 12px on the left/right */
+    margin: 0px 40px 10px; /* Margin spacing on right and bottom */
+}
+
+/* Styling for the Create Account button */
+#new-account {
+    color: whitesmoke; /* Text color is white */
+    background-color: dodgerblue; /* Background color is dodgerblue */
+    padding: 4px 25px; /* Padding is 4px on the top/bottom, 25px on the left/right */
+    margin: 0px 40px; /* Margin spacing on right */
+    box-shadow: 2px 2px black; /* Box shadow for a subtle shadow effect */
+}
