@@ -1,0 +1,51 @@
+/* Styling for the main container */
+.container {
+    width: 950px; /* Width of the container */
+    background-color: silver; /* Background color of the container */
+    margin: 0px auto; /* Center the container horizontally */
+    padding: 10px; /* Padding inside the container */
+}
+
+/* Styling for the top navigation */
+.top-nav {
+    height: 150px; /* Height of the top navigation */
+    background-color: green; /* Background color of the top navigation */
+}
+
+/* Styling for the side navigation */
+.side-nav {
+    display: inline-block; /* Display as an inline block */
+    height: 300px; /* Height of the side navigation */
+    width: 200px; /* Width of the side navigation */
+    background-color: blue; /* Background color of the side navigation */
+    margin: 10px 10px 0px 0px; /* Margin spacing */
+    vertical-align: top; /* Align to the top */
+}
+
+/* Styling for the main content */
+.main {
+    display: inline-block; /* Display as an inline block */
+    height: 400px; /* Height of the main content */
+    width: 715px; /* Width of the main content */
+    background-color: red; /* Background color of the main content */
+    vertical-align: top; /* Align to the top */
+    margin: 10px 0px 0px 0px; /* Margin spacing */
+    padding: 10px; /* Padding inside the main content */
+}
+
+/* Styling for the sub-content */
+.sub-content {
+    display: inline-block; /* Display as an inline block */
+    height: 200px; /* Height of the sub-content */
+    width: 210px; /* Width of the sub-content */
+    background-color: yellow; /* Background color of the sub-content */
+    margin: 0px 5px 0px 0px; /* Margin spacing */
+}
+
+/* Styling for the advertisement */
+#advertisement {
+    height: 120px; /* Height of the advertisement */
+    width: 650px; /* Width of the advertisement */
+    background-color: purple; /* Background color of the advertisement */
+    margin: 10px 0px 0px 0px; /* Margin spacing */
+}
