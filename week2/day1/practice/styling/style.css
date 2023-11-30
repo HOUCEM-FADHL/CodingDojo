@@ -1,0 +1,27 @@
+/* Styling for h1 element */
+h1 {
+    background-color: black; /* Background color is black */
+    color: white; /* Text color is white */
+    font-family: cursive; /* Cursive font */
+}
+
+/* Styling for span element inside h1 */
+span {
+    color: aqua; /* Text color is aqua */
+}
+
+/* Styling for h2 element */
+h2 {
+    background-color: blueviolet; /* Background color is blueviolet */
+    color: white; /* Text color is white */
+    text-align: center; /* Center-align text */
+    font-style: italic; /* Italic font style */
+}
+
+/* Styling for h3 element */
+h3 {
+    background-color: skyblue; /* Background color is skyblue */
+    color: purple; /* Text color is purple */
+    text-align: end; /* Right-align text */
+    text-decoration: underline; /* Underline text */
+}
