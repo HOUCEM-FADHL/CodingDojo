@@ -1,0 +1,51 @@
+/* Styling for the body */
+body {
+    background-color: rgb(229, 231, 238); /* Background color of the body */
+    padding: 0px 10px; /* Padding on the body */
+}
+
+/* Styling for the main heading (h1) */
+h1 {
+    text-align: center; /* Center-align text */
+    color: rgb(68, 68, 69); /* Text color for the heading */
+}
+
+/* Styling for the first container of images */
+.container-1 {
+    height: 200px; /* Height of the container */
+    background-color: rgb(100, 200, 236); /* Background color of the container */
+    margin: 0px 0px 20px; /* Margin spacing on the bottom */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute space evenly between flex items */
+    padding: 20px; /* Padding inside the container */
+}
+
+/* Styling for the second container of images */
+.container-2 {
+    height: 200px; /* Height of the container */
+    background-color: rgb(162, 131, 155); /* Background color of the container */
+    margin: 0px 0px 20px; /* Margin spacing on the bottom */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Distribute space evenly around flex items */
+    padding: 20px; /* Padding inside the container */
+}
+
+/* Styling for the third container of images */
+.container-3 {
+    height: 200px; /* Height of the container */
+    background-color: white; /* Background color of the container */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute space evenly between flex items */
+    padding: 20px; /* Padding inside the container */
+}
+
+/* Styling for the paragraph */
+p {
+    text-align: center; /* Center-align text */
+    color: gray; /* Text color for the paragraph */
+}
+
+/* Styling for the link */
+a {
+    color: rgb(116, 201, 244); /* Text color for the link */
+}
