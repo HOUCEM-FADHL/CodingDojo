@@ -1,24 +1,33 @@
+/* Resetting the default margin for the entire body to 0 */
 body {
     margin: 0px;
 }
+
+/* Creating a flex container with centered alignment and zero padding */
 .row {
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the flex container horizontally */
     align-items: center;
     padding: 0px;
 }
+
+/* Styling for columns with shared properties */
 .col, .col-2, .col-3 {
-    background-color: rgb(44, 205, 151);
-    color: white;
-    padding: 10px;
-    margin: 10px;
+    background-color: rgb(44, 205, 151); /* Background color */
+    color: white; /* Text color */
+    padding: 10px; /* Padding around the content inside columns */
+    margin: 10px; /* Margin around columns to create space between them */
 }
+
+/* Specific styling for columns with flex proportions */
 .col {
-    flex: 1;
+    flex: 1; /* Takes 1 part of the available space */
 }
+
 .col-2 {
-    flex: 2;
+    flex: 2; /* Takes 2 parts of the available space */
 }
+
 .col-3 {
-    flex: 3;
+    flex: 3; /* Takes 3 parts of the available space */
 }
