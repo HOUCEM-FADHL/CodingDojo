@@ -1,0 +1,46 @@
+/* Styling for the navigation container */
+.nav {
+    background-color: rgb(63, 60, 60); /* Background color of the navigation */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute space evenly between flex items */
+    align-items: center; /* Align items to the center vertically */
+    padding: 20px; /* Padding inside the navigation */
+    height: 30px; /* Fixed height for the navigation */
+}
+
+/* Styling for the navigation title */
+.nav-title {
+    color: white; /* Text color is white */
+    font-family: sans-serif; /* Sans-serif font family */
+}
+
+/* Styling for the navigation links */
+.nav-links {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute space evenly between flex items */
+    list-style-type: none; /* Remove default list item marker (bullet) */
+    color: rgb(210, 196, 196); /* Text color for the navigation links */
+}
+
+/* Styling for the active link */
+.active {
+    padding: 20px; /* Add padding to the active link */
+    color: white; /* Text color is white for the active link */
+    font-family: serif; /* Serif font family for the active link */
+}
+
+/* Styling for the button */
+.btn {
+    margin: 0px 20px; /* Margin spacing around the button */
+    background-color: rgb(74, 210, 244); /* Background color of the button */
+    border: 2px solid black; /* Black border for the button */
+    box-shadow: 2px 2px black; /* Box shadow for a subtle shadow effect */
+    color: white; /* Text color is white for the button */
+    font-family: serif; /* Serif font family for the button */
+}
+
+/* Styling for anchor links */
+a {
+    text-decoration: none; /* Remove default underline for anchor links */
+    color: rgb(203, 195, 195); /* Text color for anchor links */
+}
