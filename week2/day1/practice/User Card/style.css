@@ -1,0 +1,59 @@
+/* Resetting default styles for all elements */
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for the main container of the user card */
+.container {
+    margin: 50px 150px; /* Margin around the container */
+    border: 2px solid rgb(169, 162, 162); /* Border color and width */
+}
+
+/* Styling for the header section */
+header {
+    height: 100px; /* Height of the header */
+    background-color: rgb(26, 173, 173); /* Background color of the header */
+}
+
+/* Styling for images inside the user card */
+img {
+    width: 100px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Allow relative positioning */
+    top: -50px; /* Shift the image up by 50 pixels */
+    left: 25px; /* Shift the image left by 25 pixels */
+}
+
+/* Styling for the main content section */
+section {
+    padding: 0px 30px; /* Padding around the content section */
+    position: relative; /* Allow relative positioning */
+    top: -30px; /* Shift the section up by 30 pixels */
+}
+
+/* Styling for the main heading (user's name) */
+h1 {
+    font-size: x-large; /* Set the font size to x-large */
+}
+
+/* Styling for sections with a map or edit icon */
+.map, .edit {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+}
+
+/* Styling for map and edit icons */
+.logomap, .logoedit {
+    width: 10px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Margin around the icons */
+    position: inherit; /* Use the default positioning */
+}
