@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Set the title of the document -->
+    <title>Profile Page</title>
+    
+    <!-- Link to an external stylesheet (style.css) for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section containing navigation -->
+    <header title="Navbar">
+        <!-- Navigation container -->
+        <div class="nav">
+            <!-- Heading for the navigation -->
+            <h1 class="nav-title">Profile</h1>
+            
+            <!-- Unordered list for navigation links -->
+            <ul class="nav-links">
+                <!-- List item with a link "Home" -->
+                <li><a href="#">Home</a></li>
+                
+                <!-- List item with a link "My Profile" and the "active" class indicating it's the current page -->
+                <li><a href="#" class="active">My Profile</a></li>
+                
+                <!-- List item with a link "Find Connections" -->
+                <li><a href="#">Find Connections</a></li>
+                
+                <!-- List item with a button "Sign Out" -->
+                <li><button type="button" class="btn">Sign Out</button></li>
+            </ul>
+        </div>    
+    </header>
+    
+    <!-- Main content section -->
+    <main>
+        <!-- Left column containing user information and education -->
+        <div title="col-left" class="col-left">
+            <!-- User card container -->
+            <div title="user-card" class="container">
+                <!-- Header section (empty in this example) -->
+                <header class="header-user-card"></header>
+                
+                <!-- User profile image -->
+                <img src="images/jane-m.jpg" alt="user-circle">
+                
+                <!-- Main section containing user information -->
+                <div class="content-user-card">
+                    <!-- User's name -->
+                    <span>Jane Doe</span>
+                    
+                    <!-- Location information with a map marker icon -->
+                    <div class="map">
+                        <img src="icons/map-marker.png" alt="map-marker" class="logomap">
+                        <p>Tunis</p>
+                    </div>
+                    
+                    <!-- Job title and description -->
+                    <p>Developer | Engineer | Problem Solver</p>
+                    <p>Master of Shadows and the Internet!</p>
+                    
+                    <!-- Edit profile section with a gear icon -->
+                    <div class="edit">
+                        <img src="icons/gear.png" alt="gear" class="logomap">
+                        <a href="#">edit profile</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education section -->
+            <div title="education" class="educ">
+                <h1>Education</h1>
+                <h2>Coding Dojo - Full Stack Bootcamp</h2>
+                <p>Dec 2019 - Mars 2020</p>
+                <h3>Triple black belt in Python, Mern and C#...</h3>
+            </div>
+        </div>
+        
+        <!-- Right column containing connection requests, connections, and a "View More" link -->
+        <div title="col-right" class="col-right">
+            <!-- Connection Requests section -->
+            <div title="Conx-Req" class="conx-req">
+                <!-- Header for connection requests -->
+                <header class="req">
+                    <h2>2</h2>
+                    <h3>Connection Requests</h3>
+                </header>
+                
+                <!-- Connection request items -->
+                <div class="req2">
+                    <img src="images/todd-s.jpg" alt="todd-s">
+                    <p>Todd E</p>
+                    <img src="icons/accept-circle.png" alt="accept-circle">
+                    <img src="icons/close-circle.png" alt="close-circle">
+                </div>
+                <div class="req2">
+                    <img src="images/phil-s.jpg" alt="phil-s">
+                    <p>Phil k</p>
+                    <img src="icons/accept-circle.png" alt="accept-circle">
+                    <img src="icons/close-circle.png" alt="close-circle">
+                </div>
+            </div>
+            
+            <!-- Connections section -->
+            <div title="Conx" class="conx">
+                <!-- Header for connections -->
+                <header class="req">
+                    <h2>500+</h2>
+                    <h3>Your Connections</h3>
+                </header>
+                
+                <!-- Connection items -->
+                <div class="req2">
+                    <img src="images/adrien-s.jpg" alt="adrien-s">
+                    <p>Todd E</p>
+                </div>
+                <div class="req2">
+                    <img src="images/anne-s.jpg" alt="anne-s">
+                    <p>Phil k</p>
+                </div>
+                <div class="req2">
+                    <img src="images/alayne-s.jpg" alt="alayne-s">
+                    <p>Todd E</p>
+                </div>
+                <div class="req2">
+                    <img src="images/arry-s.jpg" alt="arry-s">
+                    <p>Phil k</p>
+                </div>
+            </div>
+            
+            <!-- "View More" link -->
+            <div class="view">
+                <a href="#">View More</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
