@@ -1,0 +1,74 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fixed width container class that will "auto-center" itself */
+.container {
+width: 1200px;
+margin: 0 auto;
+}
+
+/* Styling for the Search button */
+.btn {
+    color: rgb(53, 172, 160); /* Text color is a shade of green */
+    background-color: whitesmoke; /* Background color is whitesmoke */
+    border-color: rgb(53, 172, 160); /* Border color is a shade of green */
+    border-style: solid; /* Border style is solid */
+    padding: 2px 40px; /* Padding is 2px on the top/bottom, 40px on the left/right */
+    border-radius: 20px; /* Border radius for rounded corners */
+    margin: 40px 40px 10px; /* Margin spacing on top, right, and bottom */
+    font-weight: bold; /* Bold font weight */
+}
+
+/* Creating a flex container with centered alignment and zero padding */
+.row {
+    display: flex;
+    margin: 0 auto; /* Center the flex container horizontally */
+    align-items: center;
+    padding: 0px;
+}
+
+/* Styling for columns with shared properties */
+.col {
+    background-color: rgb(44, 205, 151); /* Background color */
+    color: white; /* Text color */
+    padding: 10px; /* Padding around the content inside columns */
+    margin: 10px; /* Margin around columns to create space between them */
+}
+.nav {
+    background-color: rgb(63, 60, 60); /* Background color of the navigation */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute space evenly between flex items */
+    align-items: center; /* Align items to the center vertically */
+    height: 60px; /* Fixed height for the navigation */
+    width: 100%; /* Full width of the viewport */
+}
+
+/* Styling for the navigation title */
+.nav-title {
+    color: white; /* Text color is white */
+    font-family: sans-serif; /* Sans-serif font family */
+    font-size:x-large; /* Set the font size to x-large */
+    padding: 20px; /* Padding around the navigation title */
+}
+
+/* Styling for the navigation links */
+.nav-links {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-evenly; /* Distribute space evenly between flex items */
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none; /* Remove default list item marker (bullet) */
+    color: rgb(210, 196, 196); /* Text color for the navigation links */
+}
+
+/* Styling for map and edit icons */
+.logomap, .logoedit {
+    width: 10px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Margin around the icons */
+    position: inherit; /* Use the default positioning */
+}
