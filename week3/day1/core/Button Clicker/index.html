@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation container -->
+    <div class="nav">
+        <!-- Heading for the navigation -->
+        <h1 class="nav-title">Dojonary</h1>
+        
+        <!-- Input for search -->
+        <input title="search" type="text" placeholder="Search" id="search">
+        
+        <!-- Button for login, with onclick event calling the 'logout' function -->
+        <button class="btn" onclick="logout(this)">Login</button>
+    </div>
+
+    <!-- Main content container -->
+    <div class="main">
+        <!-- Left column -->
+        <div class="col-left">
+            <!-- Definition block -->
+            <div class="def">
+                <!-- Noun section -->
+                <div class="noun">
+                    <span>ninja</span>
+                    <p>noun</p>
+                    <p>Plural: ninjas</p>
+                    <!-- Button with 'Like' count and alert click event-->
+                    <button class="btn" onclick="alert('Ninja was liked')">13 Likes</button>
+                </div>
+                <!-- Content section -->
+                <div class="content">
+                    <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                </div>
+            </div>
+
+            <!-- Another definition block -->
+            <div class="def">
+                <div class="noun">
+                    <span>ninja</span>
+                    <p>noun</p>
+                    <p>Plural: ninjas</p>
+                    <button class="btn">37 Likes</button>
+                </div>
+                <div class="content">
+                    <p>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="col-right">
+            <!-- Header with dynamic text -->
+            <h2>Dojonary is defined by <span>You</span></h2>
+            
+            <!-- Button for adding a definition, with onclick event calling the 'hide' function -->
+            <button class="btn" onclick="hide(this)">Add Definition</button>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
