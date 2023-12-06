@@ -1,0 +1,145 @@
+/* Resetting styles for all elements */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Body styles */
+body {
+    background-color: #f3f3f3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Top navigation styles */
+.top {
+    background-color: #333;
+    height: 75px;
+    border-top: 5px solid rebeccapurple;
+    color: #fff;
+}
+
+/* Search input styles */
+.search {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0 100px;
+}
+
+/* Button styles */
+.btn {
+    background-color: rebeccapurple;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px #000;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Navigation container and main content container styles */
+.nav-container, .flex-container {
+    width: 1080px;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Navigation container styles */
+.nav-container {
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+/* Main content container styles */
+.flex-container {
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Left column styles */
+.col-l {
+    flex: 2;
+}
+
+/* Right column styles */
+.col-r {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Video placeholder styles */
+.placeholder {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.placeholder video {
+    border-radius: 10px;
+}
+
+/* Video info row styles */
+.row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* User information styles */
+.user {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Start section styles */
+.start h1 {
+    margin-bottom: 10px;
+}
+
+.start h3 {
+    color: #333;
+    font-weight: 400;
+}
+
+/* User avatar styles */
+.avatar-s {
+    height: 64px;
+}
+
+/* User name styles */
+.user-name {
+    margin-left: 10px;
+    color: rebeccapurple;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+/* Sub-header styles */
+.sub-header {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #999;
+}
+
+/* Small video container styles */
+.video-small {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Small video thumbnail styles */
+.vid-s {
+    width: 170px;
+    margin-right: 10px;
+}
+
+/* Video title styles */
+.video-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
