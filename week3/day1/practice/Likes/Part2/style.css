@@ -1,0 +1,88 @@
+/* Resetting margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the main content section */
+main {
+    margin: 10px 200px; /* Margin around the main content */
+    display: flex; /* Use flexbox layout for main content */
+    justify-content: space-between; /* Space between child elements */
+}
+
+/* Styling for the right side (user information) */
+.right-side {
+    flex: 1; /* Take up available space */
+    border: 2px solid black; /* Border around the right side */
+    margin-right: 10px; /* Margin on the right side */
+    display: flex; /* Use flexbox layout for right side */
+    flex-direction: column; /* Arrange child elements in a column */
+    align-items: center; /* Center child elements horizontally */
+    padding: 20px 10px; /* Padding for inner content */
+}
+
+/* Styling for the post containers */
+.container {
+    flex: 2; /* Take up double the space compared to other flex items */
+    padding: 10px; /* Padding for inner content */
+    border: 2px solid black; /* Border around each container */
+    color: black; /* Text color */
+    margin-left: 10px; /* Margin on the left side */
+    margin-bottom: 10px; /* Margin at the bottom */
+}
+
+/* Styling for the header within each container */
+.header {
+    display: flex; /* Use flexbox layout for the header */
+    justify-content: space-between; /* Space between header elements */
+    align-items: center; /* Center header elements vertically */
+    margin-bottom: 10px; /* Margin at the bottom of the header */
+}
+
+/* Styling for the main title */
+.title {
+    text-align: center; /* Center-align text */
+}
+
+/* Styling for the subheading (h3) */
+h3 {
+    font-weight: lighter; /* Set font weight to lighter */
+}
+
+/* Styling for the like section within each container */
+.like {
+    display: flex; /* Use flexbox layout for the like section */
+    justify-content: space-between; /* Space between like section elements */
+}
+
+/* Styling for the like button */
+.btn {
+    margin-left: 20px; /* Margin on the left side of the button */
+    border: 2px solid black; /* Border around the button */
+    background-color: #f2ca4e; /* Background color of the button */
+    padding: 0px 10px; /* Padding for the button */
+    box-shadow: 2px 2px black; /* Box shadow for a subtle effect */
+}
+
+/* Styling for the header section at the top of the page */
+header {
+    margin: 0px 200px; /* Margin around the header */
+    height: 30px; /* Height of the header */
+    background-color: black; /* Background color of the header */
+    color: white; /* Text color of the header */
+    font-size: x-large; /* Font size of the header */
+    padding: 20px; /* Padding for inner content */
+    align-items: center; /* Center header elements vertically */
+}
+
+/* Styling for the user avatar image */
+img {
+    width: 50px; /* Set a fixed width for the image */
+    margin-bottom: 10px; /* Margin at the bottom of the image */
+}
+
+/* Styling for the "Add an avatar" link within the right side */
+.right-side a {
+    margin-bottom: 10px; /* Margin at the bottom of the link */
+}
