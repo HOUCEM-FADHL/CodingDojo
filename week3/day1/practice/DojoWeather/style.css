@@ -1,0 +1,141 @@
+/* Reset default margin, padding, and set font-family */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+}
+
+/* Styling for the header */
+header {
+    background-color: #9FC5F8;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for the content section within the header */
+.content {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the city selection area */
+.city {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for each city option in the selection */
+.city span {
+    margin-left: 20px;
+    font-size: large;
+    cursor: pointer;
+}
+
+/* Styling for the main content section */
+main {
+    color: black;
+    margin: 10px 160px;
+}
+
+/* Styling for the top section with city name and temperature unit selector */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    border-bottom: 2px solid black;
+}
+
+/* Styling for the top-right section with temperature unit selector */
+.top-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the temperature unit selector paragraph */
+.top-right p {
+    margin-right: 10px;
+}
+
+/* Styling for the middle section with weather information */
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Styling for the fixed position cookies notification at the bottom */
+.cookies {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEEEEE;
+    color: black;
+    border: 2px solid black;
+    margin: 10px 160px;
+    padding: 10px;
+}
+
+/* Styling for weather icons in each day's forecast */
+.today img, .tomorrow img, .friday img, .saturday img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Styling for each day's weather information card */
+.today, .tomorrow, .friday, .saturday {
+    width: 150px;
+    text-align: center;
+    background-color: #EEEEEE;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+/* Styling for heading in each day's weather information card */
+h3 {
+    margin-bottom: 10px;
+}
+
+/* Styling for temperature values in each day's weather information card */
+.red, .blue {
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+/* Styling for the red temperature value */
+.red {
+    color: #CF2A27;
+}
+
+/* Styling for the blue temperature value */
+.blue {
+    color: #2B78E4;
+}
+
+/* Styling for the temperature values container */
+.temp {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Styling for the text in the cookie notification */
+.text {
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+/* Styling for the accept button in the cookie notification */
+.accept {
+    background-color: #9FC5F8;
+    box-shadow: 2px 2px black;
+    padding: 0px 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title and external stylesheets -->
+    <title>Dojo Weather</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header section with DojoWeather title and city options -->
+    <header>
+        <div class="content">
+            <h1>DojoWeather</h1>
+            <div class="city">
+                <!-- City options with onclick events to alert loading -->
+                <span onclick="alert('Loading weather report...')">Burbank</span>
+                <span onclick="alert('Loading weather report...')">Chicago</span>
+                <span onclick="alert('Loading weather report...')">Dallas</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <!-- Top section with city name and temperature unit selector -->
+        <div class="top">
+            <h2>San Jose</h2>
+            <div class="top-right">
+                <p>show temperature in </p>
+                <!-- Temperature unit selector with onchange event -->
+                <select title="temperature_unit" name="temperature" id="select-temp" onchange="change_temp(this)">
+                    <option value="celcus">°C</option>
+                    <option value="farahd">°F</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Middle section with weather information for today, tomorrow, Friday, and Saturday -->
+        <div class="middle">
+            <!-- Today's weather information -->
+            <div class="today">
+                <h3>Today</h3>
+                <img src="assets/some_rain.png" alt="some_rain">
+                <p>some rain</p>
+                <!-- Temperature details for today -->
+                <div class="temp">
+                    <span class="red">24°</span>
+                    <span class="blue">18°</span>
+                </div>
+            </div>
+
+            <!-- Tomorrow's weather information -->
+            <div class="tomorrow">
+                <h3>Tomorrow</h3>
+                <img src="assets/some_sun.png" alt="some_sun">
+                <p>some sun</p>
+                <!-- Temperature details for tomorrow -->
+                <div class="temp">
+                    <span class="red">27°</span>
+                    <span class="blue">19°</span>
+                </div>
+            </div>
+
+            <!-- Friday's weather information -->
+            <div class="friday">
+                <h3>Friday</h3>
+                <img src="assets/some_clouds.png" alt="some_clouds">
+                <p>some clouds</p>
+                <!-- Temperature details for Friday -->
+                <div class="temp">
+                    <span class="red">21°</span>
+                    <span class="blue">16°</span>
+                </div>
+            </div>
+
+            <!-- Saturday's weather information -->
+            <div class="saturday">
+                <h3>Saturday</h3>
+                <img src="assets/some_sun.png" alt="some_sun">
+                <p>some sun</p>
+                <!-- Temperature details for Saturday -->
+                <div class="temp">
+                    <span class="red">26°</span>
+                    <span class="blue">21°</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section with cookie notification and acceptance button -->
+    <footer class="cookies">
+        <img src="assets/cookie.png" alt="cookie">
+        <div class="text">
+            <h3>Stop! Cookie time</h3>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyze our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <!-- Accept button with onclick event to hide the cookie notification -->
+        <button class="accept" onclick="hide()">I Accept</button>
+    </footer>
+
+    <!-- Script tag linking to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
