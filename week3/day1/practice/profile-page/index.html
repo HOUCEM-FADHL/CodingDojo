@@ -4,20 +4,19 @@
     <!-- Metadata for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Page title and external stylesheet -->
+
+    <!-- Title and external stylesheets -->
     <title>Profile Page</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Preconnect and link to the Roboto font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navbar section -->
     <div class="nav">
         <div class="flex-container">
-            <!-- Title of the navigation -->
+            <!-- Title of the navbar -->
             <h1 class="nav-title">Profile</h1>
             
             <!-- Navigation links -->
@@ -39,7 +38,7 @@
             <!-- User info card -->
             <div class="card user-card">
                 <div class="card-header">
-                    <!-- User avatar image -->
+                    <!-- Avatar image of the user -->
                     <img src="images/jane-m.jpg" alt="jane" class="avatar-m">
                 </div>
                 <div class="card-body">
@@ -48,7 +47,8 @@
                     <h3><img src="icons/map-marker.png" alt="pin" class="icon-s"> Seattle</h3>
                     <p>Developer | Engineer | Problem Solver<br>
                     Master of shadows and the Internet!</p>
-                    <!-- Edit profile link with associated onclick events-->
+
+                    <!-- Edit profile link -->
                     <p><a href="#" onclick="changename()"><img src="icons/gear.png" alt="gear" class="icon-s"> edit profile</a></p>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <!-- Connection requests card -->
             <div class="card">
                 <div class="card-header">
-                    <!-- Badge for connection requests count -->
+                    <!-- Badge showing the number of connection requests -->
                     <span class="badge con-req">2</span>
                     <h3>Connection Requests</h3>
                 </div>
@@ -86,9 +86,9 @@
                             Todd E
                         </span>
                         <span>
-                            <!-- Accept and close icons with associated onclick events -->
-                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick="status ('accept'), hide()">
-                            <img src="icons/close-circle.png" alt="close" class="icon" onclick="status ('refuse'), hide()">
+                            <!-- Accept and close icons with onclick events -->
+                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick="status('accept'), hide()">
+                            <img src="icons/close-circle.png" alt="close" class="icon" onclick="status('refuse'), hide()">
                         </span>
                     </li>
                     <li class="card-list-item item2">
@@ -97,9 +97,9 @@
                             Phil E
                         </span>
                         <span>
-                            <!-- Accept and close icons with associated onclick events -->
-                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick="status ('accept'), hide()">
-                            <img src="icons/close-circle.png" alt="close" class="icon" onclick="status ('refuse'), hide()">
+                            <!-- Accept and close icons with onclick events -->
+                            <img src="icons/accept-circle.png" alt="accept" class="icon" onclick="status('accept'), hide()">
+                            <img src="icons/close-circle.png" alt="close" class="icon" onclick="status('refuse'), hide()">
                         </span>
                     </li>
                 </ul>
@@ -108,11 +108,40 @@
             <!-- Your connections card -->
             <div class="card">
                 <div class="card-header">
-                    <!-- Badge for your connections count -->
+                    <!-- Badge showing the number of your connections -->
                     <span class="badge y-con">418</span>
                     <h3>Your Connections</h3>
                 </div>
                 <ul class="card-list">
                     <!-- Your connections list items -->
                     <li class="card-list-item start">
-                        <img src="images/ad
+                        <img src="images/adrien-s.jpg" alt="adrien" class="avatar-s">
+                        Adrien D
+                    </li>
+                    <li class="card-list-item start">
+                        <img src="images/anne-s.jpg" alt="anne" class="avatar-s">
+                        Anne J
+                    </li>
+                    <li class="card-list-item start">
+                        <img src="images/alayne-s.jpg" alt="alayne" class="avatar-s">
+                        Alayne T
+                    </li>
+                    <li class="card-list-item start">
+                        <img src="images/arry-s.jpg" alt="arry" class="avatar-s">
+                        Arry Y
+                    </li>
+                </ul>
+                
+                <!-- View more link in the card footer -->
+                <div class="card-footer">
+                    <a href="#">View More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Include external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
