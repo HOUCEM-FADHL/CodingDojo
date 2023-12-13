@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the document -->
     <title>Calculator</title>
+    <!-- Link to an external stylesheet (assumed to be named 'style.css') -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- Calculator container -->
     <div id="calculator">
+        <!-- Display area for the calculator -->
         <div id="display">0</div>
+        <!-- Rows of buttons for numbers and operators -->
         <div class="row">
             <button onclick="press(7);">7</button>
             <button onclick="press(8);">8</button>
@@ -38,6 +43,7 @@
             <button id="equals" onclick="calculate()">=</button>
         </div>
     </div>
-<script src="script.js"></script>
+    <!-- Script tag linking to an external JavaScript file (assumed to be named 'script.js') -->
+    <script src="script.js"></script>
 </body>
 </html>

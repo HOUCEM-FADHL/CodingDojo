@@ -1,13 +1,15 @@
+/* Global styling for the entire page */
 body {
-font-family: 'Arial', sans-serif;
-background-color: #f4f4f4;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
+/* Styling for the calculator container */
 #calculator {
     color: white;
     width: 300px;
@@ -18,6 +20,7 @@ margin: 0;
     text-align: right;
 }
 
+/* Styling for the display area */
 #display {
     font-size: 24px;
     /* border: 1px solid #ccc; */
@@ -27,6 +30,7 @@ margin: 0;
     background-color: rgb(40, 39, 39);
 }
 
+/* Styling for each row of buttons */
 .row {
     display: flex;
     justify-content: space-between;
@@ -34,6 +38,7 @@ margin: 0;
     margin: 0px 15px 10px 15px;
 }
 
+/* Styling for individual buttons */
 button {
     width: 50px;
     height: 50px;
@@ -45,10 +50,12 @@ button {
     color: white;
 }
 
+/* Styling for operator buttons */
 .operator {
     background-color: #ff9900; /* Orange for operators */
 }
 
+/* Styling for the equals button */
 #equals {
     width: 100%;
     background-color: #ccd0cc; /* Green for equals button */
