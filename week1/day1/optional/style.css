@@ -1,0 +1,57 @@
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f4f4f4;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+#calculator {
+    color: white;
+    width: 300px;
+    background-color: rgb(40, 39, 39);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: right;
+}
+
+#display {
+    font-size: 24px;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(40, 39, 39);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 10px; */
+    margin: 0px 15px 10px 15px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border:none;
+    border-radius: 50%;
+    background-color: #626262;
+    cursor: pointer;
+    color: white;
+}
+
+.operator {
+    background-color: #ff9900; /* Orange for operators */
+}
+
+#equals {
+    width: 100%;
+    background-color: #ccd0cc; /* Green for equals button */
+    color: black;
+    border-radius: 10px;
+}
