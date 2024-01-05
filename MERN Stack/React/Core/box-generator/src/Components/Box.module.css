@@ -1,0 +1,12 @@
+.box {
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--color);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}

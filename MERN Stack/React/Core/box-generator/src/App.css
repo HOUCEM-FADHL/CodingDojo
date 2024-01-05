@@ -1,18 +1,9 @@
 .App {
   text-align: center;
-  margin-top: 20px;
-  max-width: 1000px;
+  margin: 0px 300px;
 }
-label, p {
-  font-weight: bold;
-}
-
-form div {
-  background-color: azure;
-  border: 2px solid black;
-  padding: 20px;
-  margin: 10px;
-}
-span {
-  color: aquamarine;
+input {
+  background-color: #ece5e5;
+  border: none;
+  margin: 20px;
 }
