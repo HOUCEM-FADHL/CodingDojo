@@ -1,0 +1,45 @@
+.App {
+  text-align:center;
+  margin: 40px 200px;
+  border: 2px solid #2492da;
+  background-color: #9fc5f8;
+  border-radius: 10px;
+}
+.list-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 20px;
+}
+.todo-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 30px;
+  border: 1px solid #2492da;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+
+}
+.delete {
+  height: 30px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+.todo-add {
+  margin-top: 10px;
+}
+.todo-add input {
+  margin-right: 10px;
+  border: none;
+}
+button {
+  background-color: white;
+  border: 1px solid #2492da;
+  border-radius: 5px;
+}
+h1 {
+  color: #2492da;
+}
