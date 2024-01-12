@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+.search-form{
+  margin: 20px 0px;
+  font-size: larger;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+form div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+select, input {
+  background-color: #EFEFEF;
+  border: none;
+  border-radius: 3px;
+}
+button{
+  background-color: #0019F8;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
