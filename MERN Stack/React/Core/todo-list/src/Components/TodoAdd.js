@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-// TodoAdd component receives 'todoItems' and 'setTodoItems' as props
-const TodoAdd = ({ todoItems, setTodoItems }) => {
+// TodoAdd component addItemToTodoItems as props
+    const TodoAdd = ({ addItemToTodoItems }) => {
     // State variable for the input value
     const [item, setItem] = useState('');
 
@@ -9,8 +9,8 @@ const TodoAdd = ({ todoItems, setTodoItems }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Update todoItems state with the new item
-        setTodoItems([...todoItems, item]);
+        //add item to todoItems
+        addItemToTodoItems(item);
 
         // Reset the input value
         setItem('');

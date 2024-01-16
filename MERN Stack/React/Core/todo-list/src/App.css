@@ -5,46 +5,66 @@
   background-color: #9fc5f8;
   border-radius: 10px;
 }
-.list-container {
+.todo-list {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 30px;
   margin: 20px 20px;
+  gap: 10px;
 }
 .todo-items {
+  flex: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 500px;
-  height: 30px;
   border: 1px solid #2492da;
   border-radius: 5px;
-  margin-bottom: 5px;
   background-color: white;
 
 }
-.delete {
-  height: 30px;
-  margin-bottom: 5px;
-  margin-left: 5px;
+.todo-delete{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  
 }
+.todo-delete button{
+
+  margin: 0px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
 .todo-add {
-  margin-top: 10px;
+  margin: 10px 20px;
+
 }
-.todo-add input {
-  margin-right: 10px;
+form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+form input {
+  flex: 3;
   border: none;
 }
-button {
+form button {
+  flex: 1;
   background-color: #2492da;
   border: 1px solid #2492da;
   border-radius: 5px;
   color: white;
 }
-.delete button {
-  background-color: black;
-  border: 1px solid black;
-}
+
 h1 {
   color: #2492da;
 }
