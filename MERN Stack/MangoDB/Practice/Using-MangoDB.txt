@@ -1,0 +1,92 @@
+---
+> db
+test
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use my_first_db
+switched to db my_first_db
+> db.createCollection("students")
+> show collections
+students
+> db.students.insert({"_id": "1","name": "Houcem","home_state": "California","lucky_number": 7,"birthday": {"month": 11,"day": 7,"year": 1989}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({"_id": "2","name": "firas","home_state": "Washington","lucky_number": 8,"birthday": {"month": 4,"day": 9,"year": 1994}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({"_id": "3","name": "messi","home_state": "Washington","lucky_number": 10,"birthday": {"month": 5,"day": 10,"year": 1990}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({"_id": "4","name": "ronaldo","home_state": "California","lucky_number": 5,"birthday": {"month": 2,"day": 12,"year": 1991}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({"_id": "5","name": "emma","home_state": "California","lucky_number": 14,"birthday": {"month": 9,"day": 19,"year": 1999}})
+WriteResult({ "nInserted" : 1 })
+> db.students.find({})
+{ "_id" : "1", "name" : "Houcem", "home_state" : "California", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 7, "year" : 1989 } }
+{ "_id" : "2", "name" : "firas", "home_state" : "Washington", "lucky_number" : 8, "birthday" : { "month" : 4, "day" : 9, "year" : 1994 } }
+{ "_id" : "3", "name" : "messi", "home_state" : "Washington", "lucky_number" : 10, "birthday" : { "month" : 5, "day" : 10, "year" : 1990 } }
+{ "_id" : "4", "name" : "ronaldo", "home_state" : "California", "lucky_number" : 5, "birthday" : { "month" : 2, "day" : 12, "year" : 1991 } }
+{ "_id" : "5", "name" : "emma", "home_state" : "California", "lucky_number" : 14, "birthday" : { "month" : 9, "day" : 19, "year" : 1999 } }
+> db.students.find({home_state: {$in: ["California", "Washington"]}})
+{ "_id" : "1", "name" : "Houcem", "home_state" : "California", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 7, "year" : 1989 } }
+{ "_id" : "2", "name" : "firas", "home_state" : "Washington", "lucky_number" : 8, "birthday" : { "month" : 4, "day" : 9, "year" : 1994 } }
+{ "_id" : "3", "name" : "messi", "home_state" : "Washington", "lucky_number" : 10, "birthday" : { "month" : 5, "day" : 10, "year" : 1990 } }
+{ "_id" : "4", "name" : "ronaldo", "home_state" : "California", "lucky_number" : 5, "birthday" : { "month" : 2, "day" : 12, "year" : 1991 } }
+{ "_id" : "5", "name" : "emma", "home_state" : "California", "lucky_number" : 14, "birthday" : { "month" : 9, "day" : 19, "year" : 1999 } }
+> db.students.find({"lucky_number": {$gt: 3}})
+{ "_id" : "1", "name" : "Houcem", "home_state" : "California", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 7, "year" : 1989 } }
+{ "_id" : "2", "name" : "firas", "home_state" : "Washington", "lucky_number" : 8, "birthday" : { "month" : 4, "day" : 9, "year" : 1994 } }
+{ "_id" : "3", "name" : "messi", "home_state" : "Washington", "lucky_number" : 10, "birthday" : { "month" : 5, "day" : 10, "year" : 1990 } }
+{ "_id" : "4", "name" : "ronaldo", "home_state" : "California", "lucky_number" : 5, "birthday" : { "month" : 2, "day" : 12, "year" : 1991 } }
+{ "_id" : "5", "name" : "emma", "home_state" : "California", "lucky_number" : 14, "birthday" : { "month" : 9, "day" : 19, "year" : 1999 } }
+> db.students.find({"lucky_number": {$lte: 10}})
+{ "_id" : "1", "name" : "Houcem", "home_state" : "California", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 7, "year" : 1989 } }
+{ "_id" : "2", "name" : "firas", "home_state" : "Washington", "lucky_number" : 8, "birthday" : { "month" : 4, "day" : 9, "year" : 1994 } }
+{ "_id" : "3", "name" : "messi", "home_state" : "Washington", "lucky_number" : 10, "birthday" : { "month" : 5, "day" : 10, "year" : 1990 } }
+{ "_id" : "4", "name" : "ronaldo", "home_state" : "California", "lucky_number" : 5, "birthday" : { "month" : 2, "day" : 12, "year" : 1991 } }
+> db.students.find({lucky_number: {$gte: 1, $lte: 9}})
+{ "_id" : "1", "name" : "Houcem", "home_state" : "California", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 7, "year" : 1989 } }
+{ "_id" : "2", "name" : "firas", "home_state" : "Washington", "lucky_number" : 8, "birthday" : { "month" : 4, "day" : 9, "year" : 1994 } }
+{ "_id" : "4", "name" : "ronaldo", "home_state" : "California", "lucky_number" : 5, "birthday" : { "month" : 2, "day" : 12, "year" : 1991 } }
+> db.students.updateMany({}, {$set: {interests: ["coding", "brunch", "MongoDB"]}})
+{ "acknowledged" : true, "matchedCount" : 5, "modifiedCount" : 5 }
+> db.students.updateMany({}, {$push: {interests: {$each: ["Express", "React"]}}})
+{ "acknowledged" : true, "matchedCount" : 5, "modifiedCount" : 5 }
+>db.students.update({name:"Houcem"}, {$push: {interests: "taxes"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({name:"Houcem"}, {$pull: {interests: "taxes"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.remove({home_state: "California"})
+WriteResult({ "nRemoved" : 3 })
+> db.students.remove({name: "firas"})
+WriteResult({ "nRemoved" : 1 })
+> db.students.findOneAndDelete({lucky_number: {$gt: 5}})
+  db.students.findOneAndDelete({lucky_number: {$gt: 5}})
+{
+        "_id" : "3",
+        "name" : "messi",
+        "home_state" : "Washington",
+        "lucky_number" : 10,
+        "birthday" : {
+                "month" : 5,
+                "day" : 10,
+                "year" : 1990
+        },
+        "interests" : [
+                "coding",
+                "brunch",
+                "MongoDB",
+                "Express",
+                "React"
+]}
+> db.students.updateMany({}, {$set: {number_of_belts: 0}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.updateMany({home_state: "Washington"}, {$inc: {number_of_belts: 1}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.updateMany({}, {$rename: {"number_of_belts": "belts_earned"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.updateMany({}, {$unset: {lucky_number: 1}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.updateMany({}, {$currentDate: {updated_on: true}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.students.find({})
+{ "_id" : "3", "name" : "messi", "home_state" : "Washington", "birthday" : { "month" : 5, "day" : 10, "year" : 1990 }, "interests" : [ "coding", "brunch", "MongoDB", "Express", "React" ], "belts_earned" : 1, "updated_on" : ISODate("2024-01-19T00:09:56.054Z") }
