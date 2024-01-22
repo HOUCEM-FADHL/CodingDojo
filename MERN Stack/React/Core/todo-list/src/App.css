@@ -1,11 +1,11 @@
-.App {
+/* .App {
   text-align:center;
   margin: 40px 200px;
   border: 2px solid #2492da;
   background-color: #9fc5f8;
   border-radius: 10px;
-}
-.todo-list {
+} */
+/* .todo-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -39,14 +39,14 @@
   border: none;
   border-radius: 5px;
   background-color: black;
-  color: white;
-}
+  color: white; */
+/* } */
 
-.todo-add {
+/* .todo-add {
   margin: 10px 20px;
 
-}
-form {
+} */
+/* form {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -56,15 +56,15 @@ form {
 form input {
   flex: 3;
   border: none;
-}
-form button {
+} */
+/* form button {
   flex: 1;
   background-color: #2492da;
   border: 1px solid #2492da;
   border-radius: 5px;
   color: white;
-}
-
+} */
+/* 
 h1 {
   color: #2492da;
-}
+} */
