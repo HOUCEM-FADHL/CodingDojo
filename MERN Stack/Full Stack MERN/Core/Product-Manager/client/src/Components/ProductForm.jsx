@@ -4,7 +4,8 @@ import axios from "axios";
 import { Button, Form, Row, Col } from "react-bootstrap";
 
 // Define the ProductForm functional component
-const ProductForm = () => {
+const ProductForm = (props) => {
+    const { addProduct } = props;
     // State variables to manage form input values
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
@@ -23,8 +24,10 @@ const ProductForm = () => {
         })
         .then((res) => {
             // Log the response data upon successful creation
-            console.log(res);
-            console.log(res.data);
+            console.log("res form",res);
+            console.log("res.data form",res.data);
+            // Set the retrieved products to the state variable
+            addProduct(res.data);
         })
         .catch((err) => console.log(err));
 

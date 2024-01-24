@@ -18,5 +18,10 @@ module.exports = {
         .then((product) => res.json(product))
         .catch((err) => res.status(500).json(err));
     },
-    
-};
+    // Retrieve a single Product by its ID
+    getOneProduct: (req, res) => {
+        Product.find({ _id: req.params.id })
+        .then((oneProduct) => res.json(oneProduct))
+        .catch((err) => res.status(500).json(err));
+    },
+    }
