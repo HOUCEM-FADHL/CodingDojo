@@ -10,9 +10,10 @@ const ProductSchema = new mongoose.Schema(
       minlength: [3, "Title must be at least 3 characters long"],
     },
     price: {
-      type: String,
+      type: Number,
       required: [true, "Price is required"],
-      minlength: [1, "Price must be at least 1 character long"],
+      min: [1, "Price must be at least 1 dollar"],
+      max: [10000, "Price must be less than 10000 dollars"],
     },
     description: {
       type: String,

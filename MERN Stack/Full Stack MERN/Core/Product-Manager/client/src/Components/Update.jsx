@@ -1,12 +1,11 @@
-// Import React and necessary dependencies
-import React, { useState } from "react";
-import axios from "axios";
-import { Button, Form, Row, Col } from "react-bootstrap";
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+import { useNavigate, useParams } from "react-router-dom";
+import { Button, Row, Col, Form } from 'react-bootstrap';
 
-// Define the ProductForm functional component
-const ProductForm = (props) => {
-    // Destructure the addProduct prop
-    const { addProduct } = props;
+const Update = (props) => {
+    // Get the 'id' parameter from the URL using useParams
+    const { id } = useParams();
 
     // State variables to manage form input values
     const [title, setTitle] = useState("");
@@ -14,41 +13,47 @@ const ProductForm = (props) => {
     const [description, setDescription] = useState("");
     const [error, setError] = useState(null);
 
-    // Handler function for form submission
-    const onSubmitHandler = (e) => {
-        e.preventDefault();
+    // Navigate function from react-router-dom to navigate to other pages
+    const navigate = useNavigate();
 
-        // Send a POST request to the server to create a new product
-        axios
-            .post("http://localhost:8000/api/products", {
-                title,
-                price,
-                description,
+    // Fetch the product details based on the 'id' when the component mounts
+    useEffect(() => {
+        axios.get(`http://localhost:8000/api/products/${id}`)
+            .then(res => {
+                // Set the form input values based on the retrieved product details
+                setTitle(res.data.title);
+                setPrice(res.data.price);
+                setDescription(res.data.description);
             })
-            .then((res) => {
-                // Log the response data upon successful creation
-                console.log("res form", res);
-                console.log("res.data form", res.data);
-                // Set the retrieved products to the state variable
-                addProduct(res.data);
+            .catch(err => console.log(err))
+    }, [id])
+
+    // Function to update the product details
+    const updateProduct = (e) => {
+        e.preventDefault();
+        // Send a PATCH request to the server to update the product
+        axios.patch(`http://localhost:8000/api/products/edit/${id}`, {
+            title,
+            price,
+            description
+        })
+            .then(res => {
+                console.log(res);
+                // Navigate back to the products page after successful update
+                navigate("/products");
                 setError(null);
             })
-            .catch((err) => {
-                // Log and set an error message if the request fails
-                console.log(err.response.data.message);
+            .catch(err => {
+                console.log(err)
+                // Set an error message if the update request fails
                 setError(err.response.data.message);
-            });
+            })
+    }
 
-        // Clear the form input values after submission
-        setTitle("");
-        setPrice(0);
-        setDescription("");
-    };
-
-    // Render the form with Bootstrap components
     return (
         <div>
-            <form onSubmit={onSubmitHandler}>
+            <h1>Update a Product</h1>
+            <form onSubmit={updateProduct}>
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="2">
                         Title:
@@ -87,11 +92,11 @@ const ProductForm = (props) => {
                 </Form.Group>
                 {/* Display an error message if there is an error */}
                 {error && <p style={{ color: "red" }}>{error}</p>}
-                <Button type="submit">Create</Button>
+                <Button type="submit">Update</Button>
             </form>
         </div>
-    );
-};
+    )
+}
 
-// Export the ProductForm component as the default export
-export default ProductForm;
+// Export the Update component as the default export
+export default Update;

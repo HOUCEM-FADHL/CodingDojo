@@ -24,4 +24,26 @@ module.exports = {
         .then((oneProduct) => res.json(oneProduct))
         .catch((err) => res.status(500).json(err));
     },
+    
+    // Update an existing product by its ID
+    updateProduct: (req, res) => {
+        Product.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+            title: req.body.title,
+            price: req.body.price,
+            description: req.body.description
+        },
+        { new: true, runValidators: true }
+        )
+        .then((product) => res.json(product))
+        .catch((err) => res.status(500).json(err));
+    },
+
+    // Delete a product by its ID
+    deleteProduct: (req, res) => {
+        Product.findOneAndDelete({ _id: req.params.id })
+        .then(() => res.json("Product deleted."))
+        .catch((err) => res.status(500).json(err));
+    },
     }

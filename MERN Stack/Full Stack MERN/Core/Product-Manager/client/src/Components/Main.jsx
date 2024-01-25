@@ -1,15 +1,17 @@
 // Import React, and the ProductForm and ProductList components
-import React from 'react';
+import React from "react";
 import ProductForm from "./ProductForm";
 import ProductList from "./ProductList";
+// import { useNavigate } from "react-router-dom";
 
 // Define the Main functional component
 const Main = (props) => {
   // Destructure the products and setProducts props
-  const { products, setProducts } = props;
+  const { products, setProducts, editProduct, deleteProduct } = props;
 
   // Function to add a new product to the products array
   const addProduct = (product) => {
+    // Update the products array with the new product
     setProducts([...products, product]);
   };
 
@@ -18,12 +20,17 @@ const Main = (props) => {
     <div>
       {/* Heading for the application */}
       <h1 className="m-3">Product Manager</h1>
-      
+
       {/* Render the ProductForm component with the addProduct function */}
       <ProductForm addProduct={addProduct} />
-      
+
       {/* Render the ProductList component with products and setProducts props */}
-      <ProductList products={products} setProducts={setProducts} />
+      <ProductList
+        products={products}
+        setProducts={setProducts}
+        editProduct={editProduct}
+        deleteProduct={deleteProduct}
+      />
     </div>
   );
 };
