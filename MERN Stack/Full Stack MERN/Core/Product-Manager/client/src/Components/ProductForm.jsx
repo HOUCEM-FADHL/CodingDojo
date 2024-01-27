@@ -12,7 +12,7 @@ const ProductForm = (props) => {
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState(1);
     const [description, setDescription] = useState("");
-    const [error, setError] = useState(null);
+    const [error, setError] = useState({});
 
     // Handler function for form submission
     const onSubmitHandler = (e) => {
@@ -31,12 +31,12 @@ const ProductForm = (props) => {
                 console.log("res.data form", res.data);
                 // Set the retrieved products to the state variable
                 addProduct(res.data);
-                setError(null);
+                setError({});
             })
             .catch((err) => {
                 // Log and set an error message if the request fails
-                console.log(err.response.data.message);
-                setError(err.response.data.message);
+                console.log(err.response.data.errors);
+                setError(err.response.data.errors);
             });
 
         // Clear the form input values after submission
@@ -58,9 +58,11 @@ const ProductForm = (props) => {
                             value={title}
                             type="text"
                             onChange={(e) => setTitle(e.target.value)}
-                        />
+                            />
                     </Col>
                 </Form.Group>
+                {/* Display an error message if there is an error */}
+                {error.title?<p className="text-danger">{error.title.message}</p>:null}
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="2">
                         Price:
@@ -70,9 +72,11 @@ const ProductForm = (props) => {
                             value={price}
                             type="number"
                             onChange={(e) => setPrice(e.target.value)}
-                        />
+                            />
                     </Col>
                 </Form.Group>
+                {/* Display an error message if there is an error */}
+                {error.price?<p className="text-danger">{error.price.message}</p>:null}
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="2">
                         Description:
@@ -86,7 +90,7 @@ const ProductForm = (props) => {
                     </Col>
                 </Form.Group>
                 {/* Display an error message if there is an error */}
-                {error && <p style={{ color: "red" }}>{error}</p>}
+                {error.description?<p className="text-danger">{error.description.message}</p>:null}
                 <Button type="submit">Create</Button>
             </form>
         </div>

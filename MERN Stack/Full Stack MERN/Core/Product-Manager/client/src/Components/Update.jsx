@@ -12,7 +12,7 @@ const Update = (props) => {
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState(1);
     const [description, setDescription] = useState("");
-    const [error, setError] = useState(null);
+    const [error, setError] = useState({});
 
     // Navigate function from react-router-dom to navigate to other pages
     const navigate = useNavigate();
@@ -42,12 +42,12 @@ const Update = (props) => {
                 console.log(res);
                 // Navigate back to the products page after successful update
                 navigate("/products");
-                setError(null);
+                setError({});
             })
             .catch(err => {
                 console.log(err)
                 // Set an error message if the update request fails
-                setError(err.response.data.message);
+                setError(err.response.data.errors);
             })
     }
 
@@ -68,6 +68,8 @@ const Update = (props) => {
                         />
                     </Col>
                 </Form.Group>
+                {/* Display an error message if there is an error */}
+                {error.title?<p className="text-danger">{error.title.message}</p>:null}
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="2">
                         Price:
@@ -81,6 +83,8 @@ const Update = (props) => {
                         />
                     </Col>
                 </Form.Group>
+                {/* Display an error message if there is an error */}
+                {error.price?<p className="text-danger">{error.price.message}</p>:null}
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="2">
                         Description:
@@ -95,7 +99,7 @@ const Update = (props) => {
                     </Col>
                 </Form.Group>
                 {/* Display an error message if there is an error */}
-                {error && <p style={{ color: "red" }}>{error}</p>}
+                {error.description?<p className="text-danger">{error.description.message}</p>:null}
                 <Button type="submit">Update</Button>
             </form>
         </div>
