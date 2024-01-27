@@ -10,7 +10,7 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Import Main and Details components
-import Main from "./Components/Main";
+import Main from "./Views/Main";
 import Details from "./Components/Details";
 import Update from "./Components/Update";
 

@@ -1,7 +1,7 @@
 // Import React, and the ProductForm and ProductList components
 import React from "react";
-import ProductForm from "./ProductForm";
-import ProductList from "./ProductList";
+import ProductForm from "../Components/ProductForm";
+import ProductList from "../Components/ProductList";
 // import { useNavigate } from "react-router-dom";
 
 // Define the Main functional component

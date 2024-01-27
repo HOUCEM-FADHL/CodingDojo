@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
+
 import { Button, Row, Col, Form } from 'react-bootstrap';
 
 const Update = (props) => {
@@ -26,9 +27,9 @@ const Update = (props) => {
                 setDescription(res.data.description);
             })
             .catch(err => console.log(err))
-    }, [id])
+    }, [id]);
 
-    // Function to update the product details
+    // Function to update the product details 
     const updateProduct = (e) => {
         e.preventDefault();
         // Send a PATCH request to the server to update the product
@@ -61,6 +62,7 @@ const Update = (props) => {
                     <Col sm="10">
                         <Form.Control
                             value={title}
+                            name='title'
                             type="text"
                             onChange={(e) => setTitle(e.target.value)}
                         />
@@ -73,6 +75,7 @@ const Update = (props) => {
                     <Col sm="10">
                         <Form.Control
                             value={price}
+                            name='price'
                             type="number"
                             onChange={(e) => setPrice(e.target.value)}
                         />
@@ -85,6 +88,7 @@ const Update = (props) => {
                     <Col sm="10">
                         <Form.Control
                             value={description}
+                            name='description'
                             type="text"
                             onChange={(e) => setDescription(e.target.value)}
                         />
