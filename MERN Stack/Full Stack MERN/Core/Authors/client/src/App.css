@@ -1,0 +1,26 @@
+
+.edit-button {
+  background: linear-gradient(to bottom, #F3DFCC, #5b615b);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  opacity: 0.8;
+}
+
+.delete-button {
+  background: linear-gradient(to bottom, #EDC9C9, #5b615b);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  opacity: 0.8;
+}
