@@ -7,11 +7,10 @@ import "../App.css";
 
 // Functional component for displaying a list of authors
 const AuthorsList = (props) => {
-    // Destructure props to extract necessary variables and functions
-    const { authorNames, setAuthorNames } = props;
 
     // State variables
     const [sorted, setSorted] = useState([]);
+    const [authorNames, setAuthorNames] = useState([]);
     
     // Get the navigate function from the react-router-dom library
     const navigate = useNavigate();
@@ -29,7 +28,7 @@ const AuthorsList = (props) => {
             setSorted(sortedObjects);
         })
         .catch((err) => console.log(err));
-    }, [setAuthorNames]);
+    }, []);
 
     // Function to delete an author
     const deleteAuthor = (e, id) => {

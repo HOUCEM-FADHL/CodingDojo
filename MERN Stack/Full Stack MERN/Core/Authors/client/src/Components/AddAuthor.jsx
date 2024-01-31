@@ -1,5 +1,5 @@
 // Import React and necessary components/libraries
-import React from "react";
+import React, {useState} from "react";
 import AuthorForm from "../Components/AuthorForm";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 // Functional component for adding an author
 const AddAuthor = (props) => {
   // Destructure props to extract necessary variables and functions
-  const { authorNames, setAuthorNames, error, setError } = props;
+  const [error, setError] = useState({});
 
   // Get the navigate function from the react-router-dom library
   const navigate = useNavigate();
@@ -20,7 +20,6 @@ const AddAuthor = (props) => {
       .then((response) => {
         // Log the response and update the authorNames state
         console.log(response.data);
-        setAuthorNames([...authorNames, response.data]);
 
         // Navigate to the /authors route after successful creation
         navigate('/authors');

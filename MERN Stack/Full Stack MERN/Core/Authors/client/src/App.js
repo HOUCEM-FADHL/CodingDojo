@@ -6,14 +6,9 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import AuthorsList from "./Components/AuthorsList";
 import AddAuthor from "./Components/AddAuthor";
 import UpdateAuthor from "./Components/UpdateAuthor";
-import { useState } from "react";
 
 // Main App component
 function App() {
-  // State variables using React Hooks
-  const [authorNames, setAuthorNames] = useState([]);
-  const [error, setError] = useState({});
-
   // Render the main component
   return (
     <div>
@@ -26,34 +21,13 @@ function App() {
         <Route path="/" element={<Navigate to="/authors" />} />
 
         {/* Display the AuthorsList component for /authors path */}
-        <Route
-          path="/authors"
-          element={
-            <AuthorsList
-              authorNames={authorNames}
-              setAuthorNames={setAuthorNames}
-            />
-          }
-        />
+        <Route path="/authors" element={<AuthorsList />} />
 
         {/* Display the AddAuthor component for /authors/new path */}
-        <Route
-          path="/authors/new"
-          element={
-            <AddAuthor
-              authorNames={authorNames}
-              setAuthorNames={setAuthorNames}
-              error={error}
-              setError={setError}
-            />
-          }
-        />
+        <Route path="/authors/new" element={<AddAuthor />} />
 
         {/* Display the UpdateAuthor component for /authors/:id/edit path */}
-        <Route
-          path="authors/:id/edit"
-          element={<UpdateAuthor error={error} setError={setError} />}
-        />
+        <Route path="authors/:id/edit" element={<UpdateAuthor />} />
       </Routes>
     </div>
   );

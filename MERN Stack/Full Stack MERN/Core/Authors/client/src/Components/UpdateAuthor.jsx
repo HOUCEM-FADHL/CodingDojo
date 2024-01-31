@@ -5,9 +5,9 @@ import axios from "axios";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
 // Functional component for updating an author
-const UpdateAuthor = (props) => {
+const UpdateAuthor = () => {
   // Destructure props to extract necessary variables and functions
-  const { error, setError } = props;
+  const [error, setError] = useState({});
 
   // Get the "id" parameter from the URL using react-router-dom's useParams hook
   const { id } = useParams();
