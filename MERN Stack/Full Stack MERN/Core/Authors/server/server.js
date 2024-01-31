@@ -1,17 +1,26 @@
-// Import the express library
+// Import necessary modules
 const express = require("express");
 const app = express();
 const cors = require("cors");
 
-// Connect to the MongoDB database using the configuration in mongoose.config.js
+// Load environment variables from a .env file
+require("dotenv").config();
+
+// Set the port for the server to run on, using the environment variable or a default value
+const port = process.env.PORT;
+
+// Connect to the MongoDB database using Mongoose
 require("./config/mongoose.config");
 
-// Enable JSON and URL-encoded parsing middleware for incoming requests
+// Middleware for parsing JSON and URL-encoded data
 app.use(express.json(), express.urlencoded({ extended: true }));
+
+// Enable Cross-Origin Resource Sharing (CORS)
 app.use(cors());
-// Include and configure routes for Product operations
+
+// Import and use the routes defined in the author.routes.js file
 const AllMyAuthorsRoutes = require("./routes/author.routes");
 AllMyAuthorsRoutes(app);
 
-// Start the server and listen on port 8000
-app.listen(8000, () => console.log("The server is all fired up on port 8000"));
+// Start the server and listen on the specified port
+app.listen(port, () => console.log(`The server is all fired up on port: ${port}`));

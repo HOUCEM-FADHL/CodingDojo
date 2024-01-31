@@ -1,15 +1,14 @@
-// Import the mongoose library
+// Import the Mongoose library
 const mongoose = require("mongoose");
 
-// Connect to the MongoDB database using the specified connection string
+// Get the database name from the environment variables
+const dbName = process.env.DB;
+
+// Connect to the MongoDB database
 mongoose
-  .connect("mongodb://127.0.0.1:27017/AuthorsDB", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  // If the connection is successful, log a message
-  .then(() => console.log("Established a connection to the database"))
-  // If an error occurs during the connection, log an error message
+  .connect(`mongodb://127.0.0.1:27017/${dbName}`)
+  .then(() => console.log(`Established a connection to the ${dbName} database`))
   .catch((err) =>
     console.log("Something went wrong when connecting to the database ", err)
   );
+
