@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // Import necessary components and functions from libraries
 import { Routes, Route, Navigate } from "react-router-dom";
-import AuthorsList from "./Components/AuthorsList";
-import AddAuthor from "./Components/AddAuthor";
-import UpdateAuthor from "./Components/UpdateAuthor";
+import AuthorsList from "./Views/AuthorsList";
+import AddAuthor from "./Views/AddAuthor";
+import UpdateAuthor from "./Views/UpdateAuthor";
 
 // Main App component
 function App() {

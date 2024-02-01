@@ -1,6 +1,6 @@
 // Import React and necessary components/libraries
 import React, { useEffect, useState } from "react";
-import AuthorForm from "./AuthorForm";
+import AuthorForm from "../Components/AuthorForm";
 import axios from "axios";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
