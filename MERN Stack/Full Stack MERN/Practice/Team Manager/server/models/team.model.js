@@ -15,7 +15,8 @@ const TeamSchema = new mongoose.Schema(
         },
         status: {
             type: String,
-            required: [true, "Please add a status"],
+            // required: [true, "Please add a status"],
+            enum: ["Undecided", "Not Playing", "Playing"],
             default: "Undecided",
         }
     },
