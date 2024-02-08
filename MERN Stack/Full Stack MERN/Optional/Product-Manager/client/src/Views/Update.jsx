@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; // Importing Axios for making HTTP requests
 import { useNavigate, useParams } from "react-router-dom"; // Importing useNavigate and useParams for handling route parameters and navigation
-import ProductForm from "./ProductForm"; // Importing ProductForm component
+import ProductForm from "../Components/ProductForm"; // Importing ProductForm component
 
 // Update component definition
 const Update = (props) => {

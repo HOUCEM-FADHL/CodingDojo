@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { Navigate } from "react-router-dom"; // Navigational component
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap styles
 import Main from "./Views/Main"; // Main component
-import Details from "./Components/Details"; // Details component
-import Update from "./Components/Update"; // Update component
+import Details from "./Views/Details"; // Details component
+import Update from "./Views/Update"; // Update component
 
 // App component definition
 function App() {

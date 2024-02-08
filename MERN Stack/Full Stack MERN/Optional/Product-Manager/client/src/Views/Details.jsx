@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; // Importing Axios for making HTTP requests
 import { useParams, useNavigate } from "react-router-dom"; // Importing useParams and useNavigate for handling route parameters and navigation
-import DeleteButton from "./DeleteButton"; // Importing DeleteButton component
-import EditButton from "./EditButton"; // Importing EditButton component
+import DeleteButton from "../Components/DeleteButton"; // Importing DeleteButton component
+import EditButton from "../Components/EditButton"; // Importing EditButton component
 
 // Details component definition
 const Details = () => {
