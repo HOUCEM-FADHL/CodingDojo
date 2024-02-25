@@ -105,7 +105,7 @@ class BankAccount {
   
 //   }
 // class User {
-//     constructor(username, emailAddress, accountNumber ) {
+//     constructor(username, emailAddress ) {
 //       this.name = username;
 //       this.email = emailAddress;
 //       this.account = new BankAccount(0.02,0);
@@ -124,5 +124,5 @@ class BankAccount {
 //     }
 // }
 
-// const user1 = new User("user1", "user1@js.com", "account1");
+// const user1 = new User("user1", "user1@js.com");
 // user1.makeDeposit(100).makeDeposit(100).makeDeposit(100).makeWithdrawal(50).displayBalance()
