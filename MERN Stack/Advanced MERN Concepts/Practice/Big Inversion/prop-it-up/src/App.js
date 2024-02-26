@@ -1,5 +1,6 @@
 import './App.css';
 import PersonCard from './Components/PersonCard';
+import MyNewComponent from './Components/MyNewComponent';
 
 function App() {
   return (
@@ -8,6 +9,11 @@ function App() {
       <PersonCard firstName= "Smith" lastName="John" age={88} hairColor="Brown" />
       <PersonCard firstName= "Fillmore" lastName="Millard" age={50} hairColor="Brown" />
       <PersonCard firstName= "Smith" lastName="Maria" age={62} hairColor="Brown" />
+      <MyNewComponent header={ "Header Prop" }>
+            <p>This is a child</p>
+            <p>This is another child</p>
+            <p>This is even another child</p>
+        </MyNewComponent>
     </div>
   );
 }
